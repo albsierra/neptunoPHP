@@ -27,7 +27,7 @@ $username = 'root';
 /*** mysql password ***/
 $password = 'alumno';
 
-$vIdCategoria = isset($_POST['idCategoria']) ? $_POST['idCategoria'] : 'NULL';
+$vIdCategoria = isset($_GET['idCategoria']) ? $_GET['idCategoria'] : 'NULL';
 
 try {
     $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);

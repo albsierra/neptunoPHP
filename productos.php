@@ -22,12 +22,6 @@
 				<p>Empresa dedicada a la comercialización de productos de alimentación <a href="http://html5up.net">HTML5 UP</a>.</p>
 			</header>
 
-		<!-- Signup Form -->
-			<form id="filtrar" method="post" action="">
-				<input type="text" name="idCategoria" id="idCategoria" placeholder="idCategoria" />
-				<input type="submit" value="Buscar" />
-			</form>
-
         <!-- Tabla de clientes -->
 <?php include('php/productosDB.php') ?>
 		<!-- Footer -->
