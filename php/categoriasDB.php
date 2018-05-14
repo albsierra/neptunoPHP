@@ -39,7 +39,7 @@ try {
     { ?>
         <TR>
             <TD><?php print $row['IdCategoria'] ?></TD>
-            <TD><?php print $row['NombreCategoria'] ?></TD>
+            <TD><a href="productos.php?idCategoria=<?php echo $row['IdCategoria']; ?>"><?php print $row['NombreCategoria'] ?></a></TD>
             <TD><?php print $row['Descripcion'] ?></TD>
         </TR>
 
