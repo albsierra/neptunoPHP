@@ -29,7 +29,7 @@
 			</form>
 
         <!-- Tabla de clientes -->
-
+<?php include('php/clientesDB.php') ?>
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
