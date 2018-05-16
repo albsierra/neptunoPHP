@@ -1,9 +1,11 @@
 <TABLE id="t01">
     <thead>
         <TR>
+            <TH>IdPedido</TH>
             <TH>IdProducto</TH>
-            <TH>NombreProducto</TH>
             <TH>PrecioUnidad</TH>
+            <TH>Cantidad</TH>
+            <TH>Descuento</TH>
         </TR>
     </thead>
     <tbody>
@@ -27,21 +29,23 @@ $username = 'root';
 /*** mysql password ***/
 $password = 'alumno';
 
-$vIdCategoria = isset($_GET['idCategoria']) ? $_GET['idCategoria'] : 'NULL';
+$vIdProducto = isset($_GET['idProducto']) ? $_GET['idProducto'] : 'NULL';
 
 try {
     $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
     /*** echo a message saying we have connected ***/
 
     /*** The SQL SELECT statement ***/
-    $sql = "SELECT * FROM Productos WHERE IdCategoria = $vIdCategoria OR $vIdCategoria IS NULL";
+    $sql = "SELECT * FROM DetallesPedidos WHERE IdProducto = $vIdProducto OR $vIdProducto IS NULL";
 
     foreach ($dbh->query($sql) as $row)
     : ?>
         <TR>
+            <TD><?php print $row['IdPedido'] ?></TD>
             <TD><?php print $row['IdProducto'] ?></TD>
-            <TD><a href="detallesPedidos.php?idProducto=<?php echo $row['IdProducto']; ?>"><?php print $row['NombreProducto'] ?></a></TD>
             <TD><?php print $row['PrecioUnidad'] ?></TD>
+            <TD><?php print $row['Cantidad'] ?></TD>
+            <TD><?php print $row['Descuento'] ?></TD>
         </TR>
 
     <?php endforeach;
