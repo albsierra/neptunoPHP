@@ -26,6 +26,8 @@
               title="Listado de categorías"><button name="categorias" value="Categorías">Categorías</button></a></li>
           <li style="display: inline; float:left; margin:0 20px;"><a href="productos.php"
               title="Listado de productos"><button name="productos" value="Productos">Productos</button></a></li>
+            <li style="display: inline; float:left; margin:0 20px;"><a href="proveedores.php"
+              title="Listado de proveedores"><button name="proveedore" value="Proveedores">Proveedores</button></a></li>
         </ul>
 
       <p style="text-align: center; clear: both"><br>
