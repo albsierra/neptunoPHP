@@ -5,6 +5,7 @@
             <TH>NombreCompany</TH>
             <TH>NombreContacto</TH>
             <TH>Teléfono</TH>
+            <TH>Acciones</TH>
         </TR>
     </thead>
     <tbody>
@@ -26,6 +27,9 @@ try {
             <TD><?php print $row['NombreCompany'] ?></TD>
             <TD><?php print $row['NombreContacto'] ?></TD>
             <TD><?php print $row['Telefono'] ?></TD>
+            <TD><a href="borrarProveedor.php?idProveedor=<?php echo $row['IdProveedor']; ?>">
+                        <button name="eliminarProveedores" value="eliminarProveedores">Eliminar</button>
+                </a></TD>
         </TR>
 
     <?php }
