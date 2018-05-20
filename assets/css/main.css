@@ -744,6 +744,8 @@
 	}
 
 	input[type="text"],
+	input[type="tel"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	select,
@@ -773,6 +775,8 @@
 	}
 
 		input[type="text"]:invalid,
+		input[type="tel"]:invalid,
+		input[type="number"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		select:invalid,
@@ -781,6 +785,8 @@
 		}
 
 		input[type="text"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		select:focus,
@@ -827,6 +833,8 @@
 		}
 
 	input[type="text"],
+	input[type="tel"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	select {
@@ -1054,6 +1062,8 @@
 	}
 
 		#filtrar input[type="text"],
+		#filtrar input[type="tel"],
+		#filtrar input[type="number"],
 		#filtrar input[type="password"],
 		#filtrar input[type="email"] {
 			width: 18em;
