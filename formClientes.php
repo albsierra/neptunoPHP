@@ -23,7 +23,7 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="filtrar" method="post" action="">
+	<form id="filtrar" method="post" action="php/insertarClienteDB.php">
 				<input type="text" name="idCliente" id="idCliente" placeholder="idCliente" size="5"/><br />
                 <fieldset>
                 <input type="text" name="nombreCompany" id="nombreCompany" placeholder="nombreCompany" size="80"/><br />

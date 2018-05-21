@@ -30,6 +30,7 @@
 
         <!-- Tabla de clientes -->
 <?php include('php/clientesDB.php') ?>
+        <a href="formClientes.php" title="Insertar nuevo cliente"><button name="insertarClientes" value="InsertarClientes">Insertar Cliente</button></a>
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
