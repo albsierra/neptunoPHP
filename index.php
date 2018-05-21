@@ -28,6 +28,8 @@
               title="Listado de productos"><button name="productos" value="Productos">Productos</button></a></li>
             <li style="display: inline; float:left; margin:0 20px;"><a href="proveedores.php"
               title="Listado de proveedores"><button name="proveedore" value="Proveedores">Proveedores</button></a></li>
+          <li style="display: inline; float:left; margin:0 20px;"><a href="empleados.php"
+              title="Listado de empleados"><button name="empleados" value="Empleados">Empleados</button></a></li>
         </ul>
 
       <p style="text-align: center; clear: both"><br>
