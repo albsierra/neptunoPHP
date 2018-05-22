@@ -18,7 +18,7 @@ try {
     /*** echo a message saying we have connected ***/
 
     /*** The SQL SELECT statement ***/
-    $sql = "SELECT * FROM Clientes WHERE IdCliente LIKE '%$vIdCliente%' LIMIT 22";
+    $sql = "SELECT * FROM Clientes WHERE IdCliente LIKE '%$vIdCliente%'";
     foreach ($dbh->query($sql) as $row)
     { ?>
         <TR>

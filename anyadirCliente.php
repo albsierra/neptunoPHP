@@ -22,22 +22,8 @@
 				<p>Empresa dedicada a la comercialización de productos de alimentación <a href="http://html5up.net">HTML5 UP</a>.</p>
 			</header>
 
-		<!-- Signup Form -->
-                <form id="filtrar" method="post" action="anyadirCliente.php">
-				<input type="text" name="idCliente" id="idCliente" placeholder="idCliente" size="5"/><br />
-                <fieldset>
-                <input type="text" name="nombreCompany" id="nombreCompany" placeholder="nombreCompany" size="80"/><br />
-                <input type="text" name="nombreContacto" id="nombreContacto" placeholder="nombreContacto" size="60"/><br />
-                <input type="text" name="pais" id="pais" placeholder="pais" size="30"/><br />
-                <input type="tel" name="telefono" id="telefono" placeholder="telefono" /><br />
-                <input type="number" name="saldo" id="saldo" placeholder="saldo" step="0.01"/><br />
-                </fieldset>
-				<input type="reset" value="Cancelar" />
-                <input type="submit" value="Insertar" />
-			</form>
-
         <!-- Tabla de clientes -->
-
+<?php include('php/anyadirClienteDB.php') ?>
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
