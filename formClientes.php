@@ -1,3 +1,25 @@
+<?php
+    include 'php/conexionDB.php';
+    
+    $vIdCliente = isset($_GET['idCliente']) ? $_GET['idCliente'] : '';
+
+try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+    /*** echo a message saying we have connected ***/
+
+    /*** The SQL SELECT statement ***/
+    $sql = "SELECT * FROM Clientes WHERE IdCliente = '$vIdCliente'";
+    foreach ($dbh->query($sql) as $row) ; // El foreach solo tienen que recuperar una fila
+
+    /*** close the database connection ***/
+    $dbh = null;
+
+}
+catch(PDOException $e)
+{
+    echo $e->getMessage();
+}
+?>
 <!DOCTYPE HTML>
 <!--
 	Eventually by HTML5 UP
@@ -24,13 +46,13 @@
 
 		<!-- Signup Form -->
                 <form id="filtrar" method="post" action="anyadirCliente.php">
-				<input type="text" name="idCliente" id="idCliente" placeholder="idCliente" size="5"/><br />
+		<input value="<?php echo $row['IdCliente'] ?>" type="text" name="idCliente" id="idCliente" placeholder="idCliente" size="5"/><br />
                 <fieldset>
-                <input type="text" name="nombreCompany" id="nombreCompany" placeholder="nombreCompany" size="80"/><br />
-                <input type="text" name="nombreContacto" id="nombreContacto" placeholder="nombreContacto" size="60"/><br />
-                <input type="text" name="pais" id="pais" placeholder="pais" size="30"/><br />
-                <input type="tel" name="telefono" id="telefono" placeholder="telefono" /><br />
-                <input type="number" name="saldo" id="saldo" placeholder="saldo" step="0.01"/><br />
+                <input value="<?php echo $row['NombreCompany'] ?>" type="text" name="nombreCompany" id="nombreCompany" placeholder="nombreCompany" size="80"/><br />
+                <input value="<?php echo $row['NombreContacto'] ?>" type="text" name="nombreContacto" id="nombreContacto" placeholder="nombreContacto" size="60"/><br />
+                <input value="<?php echo $row['Pais'] ?>" type="text" name="pais" id="pais" placeholder="pais" size="30"/><br />
+                <input value="<?php echo $row['Telefono'] ?>" type="tel" name="telefono" id="telefono" placeholder="telefono" /><br />
+                <input value="<?php echo $row['Saldo'] ?>" type="number" name="saldo" id="saldo" placeholder="saldo" step="0.01"/><br />
                 </fieldset>
 				<input type="reset" value="Cancelar" />
                 <input type="submit" value="Insertar" />
