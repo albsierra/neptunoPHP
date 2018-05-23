@@ -5,6 +5,7 @@
             <TH>NombreCompany</TH>
             <TH>NombreContacto</TH>
             <TH>CargoContacto</TH>
+            <TH>Acciones</TH>
         </TR>
     </thead>
     <tbody>
@@ -26,6 +27,9 @@ try {
             <TD><?php print $row['NombreCompany'] ?></TD>
             <TD><?php print $row['NombreContacto'] ?></TD>
             <TD><?php print $row['CargoContacto'] ?></TD>
+            <TD><a href="formClientes.php?idCliente=<?php echo $row['IdCliente']; ?>">
+                        <button name="editarCliente" value="editarCliente">Editar</button>
+            </a></TD>
         </TR>
 
     <?php }

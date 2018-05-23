@@ -16,7 +16,11 @@ class Clientes {
     
     function __construct($arrayCliente) {
         foreach ($arrayCliente as $key => $value) {
-            $this->$key = $value;
+            if($key == 'saldo') {
+             $this->$key = (float) $value;   
+            } else {
+             $this->$key = $value;   
+            }
         }
     }
 
