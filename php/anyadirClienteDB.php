@@ -5,7 +5,7 @@ $vIdCliente = isset($_POST['idCliente']) ? $_POST['idCliente'] : '';
 $vNombreCompany = isset($_POST['nombreCompany']) ? $_POST['nombreCompany'] : '';
 $vNombreContacto = isset($_POST['nombreContacto']) ? $_POST['nombreContacto'] : '';
 $vPais = isset($_POST['pais']) ? $_POST['pais'] : '';
-$vSaldo = isset($_POST['saldo']) ? $_POST['saldo'] : '';
+$vSaldo = isset($_POST['saldo']) ? (float)$_POST['saldo'] : null;
 
 try {
     $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
@@ -13,7 +13,9 @@ try {
 
     /*** The SQL SELECT statement ***/
     $sql = "INSERT INTO `Neptuno`.`Clientes` (`IdCliente`, `NombreCompany`, `NombreContacto`, `Pais`, `Saldo`)"
-            . " VALUES ('$vIdCliente', '$vNombreCompany', '$vNombreContacto', '$vPais', '$vSaldo');";
+            . " VALUES ('$vIdCliente', '$vNombreCompany', '$vNombreContacto', '$vPais', $vSaldo)"
+            . " ON DUPLICATE KEY UPDATE `NombreCompany` = '$vNombreCompany', `NombreContacto` = '$vNombreContacto',"
+            . " `Pais` = '$vPais', `Saldo` = $vSaldo";
 
     $count = $dbh->exec($sql);
 

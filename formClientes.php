@@ -46,16 +46,16 @@ catch(PDOException $e)
 
 		<!-- Signup Form -->
                 <form id="filtrar" method="post" action="anyadirCliente.php">
-		<input value="<?php echo $row['IdCliente'] ?>" type="text" name="idCliente" id="idCliente" placeholder="idCliente" size="5"/><br />
+                    <input value="<?php echo isset($row['IdCliente']) ? $row['IdCliente'] : '' ?>" type="text" name="idCliente" id="idCliente" placeholder="idCliente" size="5"/><br />
                 <fieldset>
-                <input value="<?php echo $row['NombreCompany'] ?>" type="text" name="nombreCompany" id="nombreCompany" placeholder="nombreCompany" size="80"/><br />
-                <input value="<?php echo $row['NombreContacto'] ?>" type="text" name="nombreContacto" id="nombreContacto" placeholder="nombreContacto" size="60"/><br />
-                <input value="<?php echo $row['Pais'] ?>" type="text" name="pais" id="pais" placeholder="pais" size="30"/><br />
-                <input value="<?php echo $row['Telefono'] ?>" type="tel" name="telefono" id="telefono" placeholder="telefono" /><br />
-                <input value="<?php echo $row['Saldo'] ?>" type="number" name="saldo" id="saldo" placeholder="saldo" step="0.01"/><br />
+                <input value="<?php echo isset($row['NombreCompany']) ? $row['NombreCompany'] : '' ?>" type="text" name="nombreCompany" id="nombreCompany" placeholder="nombreCompany" size="80"/><br />
+                <input value="<?php echo isset($row['NombreContacto']) ? $row['NombreContacto'] : '' ?>" type="text" name="nombreContacto" id="nombreContacto" placeholder="nombreContacto" size="60"/><br />
+                <input value="<?php echo isset($row['Pais']) ? $row['Pais'] : '' ?>" type="text" name="pais" id="pais" placeholder="pais" size="30"/><br />
+                <input value="<?php echo isset($row['Telefono']) ? $row['Telefono'] : '' ?>" type="tel" name="telefono" id="telefono" placeholder="telefono" /><br />
+                <input value="<?php echo isset($row['Saldo']) ? $row['Saldo'] : '' ?>" type="number" name="saldo" id="saldo" placeholder="saldo" step="0.01"/><br />
                 </fieldset>
 				<input type="reset" value="Cancelar" />
-                <input type="submit" value="Insertar" />
+                <input type="submit" value="Aceptar" />
 			</form>
 
         <!-- Tabla de clientes -->
