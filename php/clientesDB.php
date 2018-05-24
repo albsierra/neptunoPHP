@@ -30,6 +30,9 @@ try {
             <TD><a href="formClientes.php?idCliente=<?php echo $row['IdCliente']; ?>">
                     <button name="editarCliente" value="editarCliente">Editar</button>
                 </a>
+                <a href="pedidosCliente.php?idCliente=<?php echo $row['IdCliente']; ?>">
+                    <button name="pedidosCliente" value="pedidosCliente">Facturación</button>
+                </a>
             </TD>
         </TR>
 
