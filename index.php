@@ -1,3 +1,4 @@
+<?php include 'session.php'; ?>
 <!DOCTYPE html>
 <!--
 	Eventually by HTML5 UP	html5up.net | @ajlkn
@@ -15,6 +16,7 @@
   <body>
     <!-- Header -->
     <header id="header">
+        <?php barraLogin() ?>
       <h1 style="text-align: center;">Neptuno</h1>
       <p style="text-align: center;">Empresa dedicada a la comercialización de
         productos de alimentación <a href="http://html5up.net">HTML5 UP</a>.&nbsp;
