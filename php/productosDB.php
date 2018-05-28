@@ -4,6 +4,7 @@
             <TH>IdProducto</TH>
             <TH>NombreProducto</TH>
             <TH>PrecioUnidad</TH>
+            <TH>Acciones</TH>
         </TR>
     </thead>
     <tbody>
@@ -25,6 +26,9 @@ try {
             <TD><?php print $row['IdProducto'] ?></TD>
             <TD><a href="detallesPedidos.php?idProducto=<?php echo $row['IdProducto']; ?>"><?php print $row['NombreProducto'] ?></a></TD>
             <TD><?php print $row['PrecioUnidad'] ?></TD>
+            <TD><a href="carrito.php?idProducto=<?php echo $row['IdProducto']; ?>">
+                        <button name="comprarProducto" value="comprarProducto">Comprar</button>
+            </a></TD>
         </TR>
 
     <?php endforeach;
